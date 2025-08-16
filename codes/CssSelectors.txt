@@ -1,0 +1,14 @@
+1) DOM=>Document Object Model.
+    The DOM is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, where each element (like headings, paragraphs, links, etc.) is an object that can be accessed and manipulated using languages like JavaScript.
+2) SELECTORS
+1. Universal : *{...} --> selects evrything on the web page
+2. Type : p{ }, h1{ }, img{ } --> selects a type of element
+3. Class : .class{ } --> selects  element with a given class , most common
+4. Id : #id{ } --> selects Id given to an element
+5. Attribute : input[type="text"]{ } -->selects an elementbased on its attribute, eg. input with attribute text is being selected here
+6. Descendents : h1 p{ } --> all p that are Descendents of h1 are being selected
+7. Child : h1>p{ } --> all p that are direct child (first Descendents)  of h1 are being selected
+8. Pseudo-class : class:hover{ }
+9. Pseudo-element : p::first-letter{ }
+10. Grouping : p,h1,a{ } --> selects multiple elements
+there are few more SELECTORS that are not often used...

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Lower opacity background image on full page */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      /* opacity: 0.8; Lower opacity for body background */
+      z-index: -1;
+    }
+
+    .login-container {
+      position: relative;
+      width: 320px;
+      padding: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      /* background: none; */
+    }
+
+    /* Full-opacity background image inside container */
+    .login-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+      background-size: cover;
+      opacity: 1;
+      z-index: -1;
+      filter: brightness(1.1);
+    }
+
+    .login-container h2,
+    .login-container input,
+    .login-container button {
+      position: relative;
+      z-index: 1;
+    }
+
+    .login-container h2 {
+      margin-bottom: 25px;
+      color: #472bd6;
+      text-align: center;
+      font-size: 30px;
+      text-shadow: 1px 1px 2px #000;
+
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .login-container input::placeholder {
+      color: #666;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <input type="password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
